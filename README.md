@@ -1,79 +1,71 @@
-# 🚀 3D Developer Portfolio Website (React + TypeScript + Three.js)
+# 🚀 Lucky Parmar — Personal 3D Portfolio
 
-[![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./video.mp4)
-
-A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
-
-If you’re a developer looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
-
-> Live preview: https://www.redoyanulhaque.me/
+A modern, high-performance **3D interactive developer portfolio** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
 
 ---
 
-## ✨ Highlights
+## 👨‍💻 About Me
 
-- **3D / WebGL experience** powered by **Three.js**
-- Smooth animations with **GSAP**
-- Modern **React + TypeScript** codebase
-- Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+Hi! I'm **Lucky Parmar**, a **Backend Developer & Graphic Designer** and Computer Science & Engineering undergraduate at **GLA University**. 
+- 🛠️ **Backend:** Java, Node.js, Express.js, REST APIs, JWT Authentication, MySQL, PostgreSQL, MongoDB, Redis
+- 🎨 **Design:** UI/UX Design, Figma, Wireframing, Adobe Photoshop, Illustrator
+- ☁️ **Systems & Tools:** Docker, Linux, Git/GitHub, Postman, DSA, OOP, System Design
+
+---
+
+## ✨ Features
+
+- **Interactive 3D Experience:** 3D character & dynamic environment powered by **Three.js** & WebGL
+- **Smooth Cinematic Animations:** Seamless interactions crafted with **GSAP & ScrollTrigger**
+- **AI Interactive Assistant (`/play`):** Interactive chess engine and AI chat persona
+- **Fully Responsive:** Optimized performance across all mobile, tablet, and desktop devices
 
 ---
 
 ## 🧰 Tech Stack
 
-- **React**
-- **TypeScript**
-- **Three.js / WebGL**
-- **GSAP**
-- **HTML / CSS / JavaScript**
+- **Frontend:** React 18, TypeScript, GSAP, CSS3, Three.js, React Three Fiber
+- **Backend & APIs:** Node.js, Express.js, REST APIs
+- **Database:** MongoDB, MySQL, PostgreSQL, Redis
+- **Tooling & Build:** Vite, ESLint, Git
 
 ---
 
 ## 🚀 Getting Started
 
-### 1) Clone
-
+### 1. Clone the repository
 ```bash
 git clone https://github.com/lucky123-parmar/portfolio-website.git
 cd portfolio-website
 ```
 
-### 2) Install
-
+### 2. Install dependencies
 ```bash
 npm install
 ```
 
-### 3) Run locally
-
+### 3. Run development server
 ```bash
 npm run dev
 ```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### 4) Build
-
+### 4. Build for production
 ```bash
 npm run build
 ```
 
 ---
 
-## 🤝 Connect
+## 🤝 Connect With Me
 
-- GitHub: https://github.com/lucky123-parmar
-- LinkedIn: https://www.linkedin.com/in/lucky-parmar-30abb6363/
-
----
-
-## 🏷️ Recommended GitHub Topics (add in repo settings)
-
-Add these topics to improve GitHub search visibility:
-
-`portfolio` `developer-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
+- **Email:** [lp817081@gmail.com](mailto:lp817081@gmail.com) / [lucky.parmar_cs23@gla.ac.in](mailto:lucky.parmar_cs23@gla.ac.in)
+- **LinkedIn:** [linkedin.com/in/lucky-parmar-30abb6363](https://www.linkedin.com/in/lucky-parmar-30abb6363/)
+- **GitHub:** [github.com/lucky123-parmar](https://github.com/lucky123-parmar)
+- **Phone:** +91-7300842381
 
 ---
 
 ## 🪪 License
 
-This project is open source and available under the **MIT License**. See [LICENSE](LICENSE).
+This project is open source and available under the **MIT License**.
