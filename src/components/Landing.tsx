@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
 import { config } from "../config";
+import HeroPortrait from "./HeroPortrait";
 
 const Landing = ({ children }: PropsWithChildren) => {
   const nameParts = config.developer.fullName.split(" ");
@@ -20,17 +21,9 @@ const Landing = ({ children }: PropsWithChildren) => {
               {lastName && <span>{lastName.toUpperCase()}</span>}
             </h1>
           </div>
-          {/* Developer Portrait Image in Center */}
-          <div className="landing-hero-image">
-            <div className="landing-hero-backdrop"></div>
-            <img
-              src={config.developer.avatar || "/images/lucky.jpg"}
-              alt={config.developer.fullName}
-              className="landing-photo-img"
-              loading="eager"
-              fetchPriority="high"
-            />
-          </div>
+
+          {/* Interactive 3D Cursor-Tracking Portrait */}
+          <HeroPortrait />
 
           <div className="landing-info">
             <h3>A</h3>
