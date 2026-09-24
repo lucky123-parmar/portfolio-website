@@ -82,15 +82,6 @@ export const config = {
             image: "/images/Prodesk.png",
             description: "Built a MERN stack assignment evaluation platform featuring separate user and admin dashboards, JWT-based secure authentication with encrypted passwords, a built-in code editor for writing/testing code, and AI-powered assignment evaluation.",
             link: "https://github.com/lucky123-parmar"
-        },
-        {
-            id: 2,
-            title: "Cloud Virtualization & Server Management Lab",
-            category: "Cloud / Systems & Virtualization",
-            technologies: "Oracle VM VirtualBox, Linux, Cloud Architecture, Virtualization",
-            image: "/images/FloodSpaces.png",
-            description: "Configured, deployed, and managed isolated virtual machine environments to simulate cloud workloads, virtual server migration, and hypervisor management.",
-            link: "https://github.com/lucky123-parmar"
         }
     ],
     contact: {
