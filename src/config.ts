@@ -3,7 +3,8 @@ export const config = {
         name: "Lucky",
         fullName: "Lucky Parmar",
         title: "Backend Developer & Computer Science Engineer",
-        description: "Computer Science & Engineering undergraduate at GLA University specializing in backend development, scalable architectures, and RESTful APIs."
+        description: "Computer Science & Engineering undergraduate at GLA University specializing in backend development, scalable architectures, and RESTful APIs.",
+        avatar: ""
     },
     social: {
         github: "lucky123-parmar",
