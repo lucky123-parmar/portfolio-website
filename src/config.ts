@@ -4,7 +4,7 @@ export const config = {
         fullName: "Lucky Parmar",
         title: "Backend Developer & Computer Science Engineer",
         description: "Computer Science & Engineering undergraduate at GLA University specializing in backend development, scalable architectures, and RESTful APIs.",
-        avatar: "/images/lucky.jpg"
+        avatar: "/images/lucky-3d.jpg"
     },
     social: {
         github: "lucky123-parmar",
