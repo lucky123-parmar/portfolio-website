@@ -82,16 +82,18 @@ const Work = () => {
               <WorkImage image={project.image} alt={project.title} link={project.link} />
             </div>
           ))}
-          {/* See All Works Button */}
-          <div className="work-box work-box-cta">
-            <div className="see-all-works">
-              <h3>Want to see more?</h3>
-              <p>Explore all of my projects and creations</p>
-              <Link to="/myworks" className="see-all-btn" data-cursor="disable">
-                See All Works →
-              </Link>
+          {/* See All Works Button - shown only when there are multiple projects */}
+          {config.projects.length > 3 && (
+            <div className="work-box work-box-cta">
+              <div className="see-all-works">
+                <h3>Want to see more?</h3>
+                <p>Explore all of my projects and creations</p>
+                <Link to="/myworks" className="see-all-btn" data-cursor="disable">
+                  See All Works →
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
