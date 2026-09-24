@@ -372,13 +372,13 @@ const Play = () => {
             <div className="player-info">
               <div className="player-avatar">
                 {config.developer.avatar ? (
-                  <img src={config.developer.avatar} alt={config.developer.name} loading="lazy" decoding="async" />
+                  <img src={config.developer.avatar} alt={config.developer.fullName} loading="lazy" decoding="async" />
                 ) : (
                   <span>👨‍💻</span>
                 )}
               </div>
               <div className="player-details">
-                <span className="player-name">{config.developer.name}</span>
+                <span className="player-name">{config.developer.fullName}</span>
                 <span className="player-rating">{engineThinking ? '🤔 Thinking...' : 'ELO 3640'}</span>
               </div>
             </div>
