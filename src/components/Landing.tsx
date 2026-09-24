@@ -20,6 +20,18 @@ const Landing = ({ children }: PropsWithChildren) => {
               {lastName && <span>{lastName.toUpperCase()}</span>}
             </h1>
           </div>
+          {/* Developer Portrait Image in Center */}
+          <div className="landing-hero-image">
+            <div className="landing-hero-backdrop"></div>
+            <img
+              src={config.developer.avatar || "/images/lucky.jpg"}
+              alt={config.developer.fullName}
+              className="landing-photo-img"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+
           <div className="landing-info">
             <h3>A</h3>
             <h2 className="landing-info-h2">
@@ -29,18 +41,6 @@ const Landing = ({ children }: PropsWithChildren) => {
               <div className="landing-h2-info">& Graphic Designer</div>
             </h2>
           </div>
-          {/* Mobile photo - shows only on mobile when 3D character is hidden */}
-          {config.developer.avatar && (
-            <div className="mobile-photo">
-              <img
-                src={config.developer.avatar}
-                alt={config.developer.fullName}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
-            </div>
-          )}
         </div>
         {children}
       </div>

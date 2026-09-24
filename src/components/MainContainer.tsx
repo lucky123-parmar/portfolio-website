@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect } from "react";
 import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";
@@ -11,60 +11,35 @@ import Work from "./Work";
 import TechStackNew from "./TechStackNew";
 import CallToAction from "./CallToAction";
 import setSplitText from "./utils/splitText";
+import { useLoading } from "../context/LoadingProvider";
+import { setProgress } from "./Loading";
 
-const MainContainer = ({ children }: PropsWithChildren) => {
-  const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
-  );
-  const [isMobile] = useState<boolean>(window.innerWidth <= 768);
-  const [shouldRenderCharacter, setShouldRenderCharacter] = useState(false);
+const MainContainer = ({ children: _children }: PropsWithChildren) => {
+  const { setLoading } = useLoading();
 
   useEffect(() => {
     const resizeHandler = () => {
       setSplitText();
-      setIsDesktopView(window.innerWidth > 1024);
     };
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
+
+    const progress = setProgress((value) => setLoading(value));
+    const timer = setTimeout(() => {
+      progress.loaded();
+    }, 400);
+
     return () => {
       window.removeEventListener("resize", resizeHandler);
+      clearTimeout(timer);
     };
-  }, []);
-
-  useEffect(() => {
-    if (window.innerWidth <= 1024) return;
-
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | undefined;
-    const win = window as Window & {
-      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
-      cancelIdleCallback?: (handle: number) => void;
-    };
-
-    const mountCharacter = () => setShouldRenderCharacter(true);
-
-    if (typeof win.requestIdleCallback === "function") {
-      idleId = win.requestIdleCallback(mountCharacter, { timeout: 1500 });
-    } else {
-      timeoutId = setTimeout(mountCharacter, 1200);
-    }
-
-    return () => {
-      if (idleId !== undefined && typeof win.cancelIdleCallback === "function") {
-        win.cancelIdleCallback(idleId);
-      }
-      if (timeoutId !== undefined) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, []);
+  }, [setLoading]);
 
   return (
     <div className="container-main">
       <Cursor />
       <Navbar />
       <SocialIcons />
-      {isDesktopView && !isMobile && shouldRenderCharacter && children}
       <div className="container-main">
         <Landing />
         <About />
